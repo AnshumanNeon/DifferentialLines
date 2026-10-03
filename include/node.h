@@ -1,8 +1,8 @@
 #ifndef NODE_H
-#include "vector.h"
+#include <raylib.h>
 
 typedef struct {
-  Vector pos;
+  Vector2 pos;
 } Node;
 
 #define NODE_H
