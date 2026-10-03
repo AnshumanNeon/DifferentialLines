@@ -1,5 +1,5 @@
 #ifndef NODE_H
-#include <cvector.h>
+#include "vector.h"
 
 typedef struct {
   Vector2 pos;
