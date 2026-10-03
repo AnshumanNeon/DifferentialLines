@@ -22,7 +22,9 @@ if (NOT raylib_FOUND)
 endif()
 
 # Our Project
-add_executable(${PROJECT_NAME} src.c)
+file(GLOB SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c") # find c files in src folder
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 
