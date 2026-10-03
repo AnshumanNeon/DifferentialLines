@@ -2,19 +2,24 @@
 #include "node.h"
 
 int main(void) {
-  InitWindow(800, 450, "raylib example - basic window");
+  // constants
+  const int width = 800;
+  const int height = 450;
+  const int grid_x = 10;
+  const int grid_y = 10;
+  const int grid_cells_x = width/grid_x;
+  const int grid_cells_y = height/grid_y;
 
-  while (!WindowShouldClose()) {
+  // raylib initialize
+  InitWindow(width, height, "raylib example - basic window");
+
+  while(!WindowShouldClose()) {
     BeginDrawing();
-      ClearBackground(RAYWHITE);
-      DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-      Node node;
-      Vector2 a = {.x = 150, .y = 100};
-      node.position = a;
-      DrawCircle(node.pos.x, node.pos.y, 0.1f, RED);
+      ClearBackground(WHITE);
     EndDrawing();
   }
 
+  // destroy
   CloseWindow();
 
   return 0;

@@ -2,9 +2,7 @@
 #include "vector.h"
 
 typedef struct {
-  Vector2 pos;
-  Node* next_node;
-  Node* prev_node;
+  Vector pos;
 } Node;
 
 #define NODE_H
